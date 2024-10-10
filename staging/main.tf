@@ -8,6 +8,8 @@ module "app" {
   db_name         = var.db_name
   app_port_external = var.app_port_external
   app_port_internal = var.app_port_internal
+  app_instance_count = var.app_instance_count
+
 }
 
 module "db" {
@@ -23,6 +25,13 @@ module "db" {
   db_root_password= var.db_root_password
 }
 
+module "nginx" {
+  source      = "../modules/nginx"
+  environment = var.environment
+  app_ips     = var.app_ips
+  network_name     = docker_network.shared_network.name
+
+}
 resource "docker_network" "shared_network" {
   name = "shared_network"
 }

@@ -49,3 +49,8 @@ variable "db_port_external" {
   description = "Port externe de la base de données"
   type        = number
 }
+
+variable "app_ips" {
+  type        = list(string)
+  description = "Liste des adresses IP des instances de l'application"
+}
