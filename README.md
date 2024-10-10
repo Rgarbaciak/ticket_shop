@@ -13,6 +13,6 @@ Ce projet utilise Terraform pour provisionner une infrastructure comprenant des 
 
 ### 1. **Cloner le dépôt**
 ```bash
-git clone [<URL_DU_DEPOT_GIT>](https://github.com/Rgarbaciak/ticket_shop/)
+git clone https://github.com/Rgarbaciak/ticket_shop/
 cd <Projet>
 ```
